@@ -66,6 +66,8 @@ If you are using Debian and wish to SSH into your guest VM from your host comput
   - May install via apt or [via these instructions](https://pip.pypa.io/en/stable/installing/)
 * curl
   - Will be a dependency later on
+* libcanberra-gtk-module
+  - To suppress an error from GNU Radio
 
 # Installing GNU Radio
 

@@ -1,5 +1,7 @@
 # Install VBox Additions
-**NOTE** The following is specifically instructions for the Debian Linux distribution. 
+__NOTE__ 
+
+The following is specifically instructions for the Debian Linux distribution. 
 If you're using Ubuntu or Mint, this will maybe still work since they're based on 
 Debian, but I can't promise
 ```bash

@@ -89,7 +89,7 @@ like I did.
 __SIDENOTE1__
 
 GNU Radio currently is still mostly built on old Python 2.7 and is in the process of migrating to Python 3.
-Unfortunately, we're not there yet so make sure you have python and pip installed.
+Unfortunately, we're not there yet so **make sure you have python and pip installed**.
 
 __SIDENOTE2__
 

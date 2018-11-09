@@ -27,13 +27,13 @@ the previous steps like gcc/g++/make/perl/etc.
 
 After a reboot, you should now have a much better experience with your VM
 
-## Want to SSH in?
+## Want to SSH in? (Optional)
 If you are using Debian and wish to SSH into your guest VM from your host computer:
 1. Google how to add a 2nd "host-only" adapter 
 2. [Do what they say here](https://unix.stackexchange.com/questions/37122/virtualbox-two-network-interfaces-nat-and-host-only-ones-in-a-debian-guest-on),
  or you may not have access to outside internet
  
-## God, the default terminal colors hurt my eyeballs
+## God, the default terminal colors hurt my eyeballs (Optional)
 1. Edit -> Profile Preferences
 2. In General tab, give your profile a name
 3. In Colors tab, uncheck 'Use colors from system theme'
@@ -54,13 +54,10 @@ If you are using Debian and wish to SSH into your guest VM from your host comput
 * libqt4-dev
   - Needed for standard gui libraries
 * libncurses5-dev
-  - idk, cs421 prof had us install it
 * libssl-dev
-  - idk, cs421 prof had us install it
 * perl
   - Needed for some build/compilation scripts
 * pkg-config
-  - idk, cs421 prof had us install it
 * python and python-dev
   - 2.7 for GNU Radio, possibly 3 for other things
 * pip

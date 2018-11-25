@@ -1,0 +1,64 @@
+.title KiCad schematic
+Cf1 Net-_Cc4-Pad2_ GND 150pF
+Cf2 Net-_Cf2-Pad1_ GND 680pF
+Cf3 Net-_Cf3-Pad1_ GND 910pF
+Cf4 Net-_Cf4-Pad1_ GND 680pF
+Cf5 Net-_Cc12-Pad1_ GND 150pF
+L2 Net-_Cc4-Pad2_ Net-_Cf2-Pad1_ 2.2u
+L3 Net-_Cf2-Pad1_ Net-_Cf3-Pad1_ 2.2u
+L4 Net-_Cf3-Pad1_ Net-_Cf4-Pad1_ 2.2u
+L6 Net-_Cf4-Pad1_ Net-_Cc12-Pad1_ 2.2u
+U8 GND GND Net-_U7-Pad3_ Net-_U7-Pad4_ Net-_U7-Pad5_ Net-_U7-Pad6_ Net-_U7-Pad7_ Net-_U7-Pad8_ Net-_U7-Pad9_ Net-_U7-Pad10_ 5v_USB Net-_U6-Pad4_ 5v_USB +5VA +5VA Net-_Cc22-Pad1_ Net-_Cc22-Pad1_ +5VA GND GND Net-_Cc23-Pad1_ Net-_Cc23-Pad1_ GND Net-_Cin1-Pad1_ ADC1173
+J1 A_in GND Conn_Coaxial
+J2 5v_USB NC_01 NC_02 NC_03 NC_04 NC_05 NC_06 NC_07 NC_08 NC_09 NC_10 NC_11 NC_12 NC_13 NC_14 NC_15 NC_16 NC_17 NC_18 NC_19 NC_20 NC_21 NC_22 NC_23 Conn_01x24_Female
+J3 GND NC_24 NC_25 NC_26 Net-_J3-Pad5_ NC_27 Net-_J3-Pad7_ Net-_J3-Pad8_ Net-_J3-Pad9_ Net-_J3-Pad10_ Net-_J3-Pad11_ Net-_J3-Pad12_ Net-_J3-Pad13_ Net-_J3-Pad14_ NC_28 NC_29 NC_30 NC_31 NC_32 NC_33 NC_34 NC_35 NC_36 NC_37 Conn_01x24_Female
+Cc23 Net-_Cc23-Pad1_ GND 10uF
+Cc22 Net-_Cc22-Pad1_ GND 10uF
+L5 Net-_Cf4-Pad1_ Net-_Cc12-Pad1_ 2.2u
+L1 Net-_Cc4-Pad2_ Net-_Cf2-Pad1_ 2.2u
+Cc4 A_in Net-_Cc4-Pad2_ 10u
+Cc12 Net-_Cc12-Pad1_ Net-_Cc12-Pad2_ 10u
+R1 Net-_Cc12-Pad1_ GND 50
+Rfb1 Net-_Rfb1-Pad1_ Net-_Rfb1-Pad2_ 270
+Cc25 GND +5VA 10u
+Cc27 5v_USB GND 10u
+Rin1 Net-_Rfb1-Pad1_ Net-_Cin1-Pad1_ 110
+Cin1 Net-_Cin1-Pad1_ GND 62pF
+Cc13 Net-_Cc13-Pad1_ GND 10u
+Rfb2 Net-_Rfb1-Pad2_ Net-_Cc13-Pad1_ 270
+D2 GND 5v_USB D_TVS
+U6 +3V3 GND Net-_J3-Pad5_ Net-_U6-Pad4_ Net-_Rpu1-Pad2_ 5v_USB SN74LVC1T45DCK
+Cc17 +3V3 GND 10u
+Cc19 5v_USB GND 10u
+Cc15 GND +3V3 10u
+Cc21 5v_USB GND 10u
+Rpu1 +3V3 Net-_Rpu1-Pad2_ 10k
+Rpu2 5v_USB Net-_Rpu2-Pad2_ 10k
+RV1 +5VA Net-_Cc12-Pad2_ GND R_POT
+D3 GND Net-_Cc12-Pad1_ D_TVS
+Cc7 Net-_Cc7-Pad1_ Net-_Cc7-Pad2_ 10u
+Cc6 Net-_Cc6-Pad1_ Net-_Cc6-Pad2_ 10u
+D1 Net-_Cc9-Pad1_ 5v_USB B120-E3
+Cc9 Net-_Cc9-Pad1_ GND 10u
+Cc11 Net-_Cc10-Pad1_ GND 0.1u
+L7 Net-_Cc9-Pad1_ Net-_Cc10-Pad1_ L_Core_Ferrite
+Cc14 +5VA GND 10u
+Cc3 5v_USB GND 10u
+Cc1 5v_USB GND 10u
+Cc5 +3V3 GND 10u
+Cc26 5v_USB GND 0.1u
+Cc24 GND +5VA 0.1u
+Cc8 +3V3 GND 0.1u
+Cc2 5v_USB GND 0.1u
+Cc16 +5VA GND 0.1u
+Cc20 +5VA GND 0.1u
+Cc18 +5VA GND 10u
+Cc10 Net-_Cc10-Pad1_ GND 10u
+U4 +5VA GND Net-_Cc10-Pad1_ UA78M05IDCY
+U3 5v_USB GND +3V3 UA78M33CDCY
+U1 5v_USB GND Net-_Cc6-Pad2_ 5v_USB Net-_Cc9-Pad1_ Net-_Cc6-Pad1_ LM2766M6X_NOPB
+U2 5v_USB GND Net-_Cc7-Pad2_ 5v_USB Net-_Cc9-Pad1_ Net-_Cc7-Pad1_ LM2766M6X_NOPB
+U7 5v_USB Net-_Rpu2-Pad2_ Net-_U7-Pad3_ Net-_U7-Pad4_ Net-_U7-Pad5_ Net-_U7-Pad6_ Net-_U7-Pad7_ Net-_U7-Pad8_ Net-_U7-Pad9_ Net-_U7-Pad10_ GND GND GND Net-_J3-Pad14_ Net-_J3-Pad13_ Net-_J3-Pad12_ Net-_J3-Pad11_ Net-_J3-Pad10_ Net-_J3-Pad9_ Net-_J3-Pad8_ Net-_J3-Pad7_ GND +3V3 +3V3 SN74LVC8T245PWR
+U5 Net-_Rfb1-Pad1_ GND Net-_Cc12-Pad2_ Net-_Rfb1-Pad2_ +5VA OPA354AIDBVR
+Cc28 5v_USB GND 10u
+.end

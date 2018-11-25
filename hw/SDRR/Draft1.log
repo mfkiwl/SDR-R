@@ -1,0 +1,21 @@
+Circuit: * C:\Users\Guy\Desktop\UMBC\2018_Fall\450 Capstone\Hardware\SDRR\Draft1.asc
+
+Direct Newton iteration for .op point succeeded.
+
+Date: Sat Nov 24 19:42:47 2018
+Total elapsed time: 12.312 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 2000286
+traniter = 2000278
+tranpoints = 1000140
+accept = 1000120
+rejected = 20
+matrix size = 9
+fillins = 0
+solver = Normal
+Matrix Compiler1: 456 bytes object code size  0.2/0.1/[0.0]
+Matrix Compiler2: off  [0.0]/0.1/0.1
+

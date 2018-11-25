@@ -1,0 +1,49 @@
+* File     : ESDARF01-1BM2.LIB
+* Revision : 1.0
+* Date     : February 2014
+*
+**************************************************************************
+* Information included is believed to be accurate and reliable. However, *
+* ST Microelectronics assumes no responsibility for the consequences of  *
+* use of such information nor for any infringement of patents or other   *
+* rights of third parties which may result from its use. No license is   *
+* granted by implication or otherwise under any patent patent rights of  *
+* ST Microelectronics. Specification mentionned in this publication are  *
+* subject to change without notice. This publication superseedes and     *
+* replaces all information previously supplied. ST Microelectronics      *
+* products are not authorized for use as critical components in life     *
+* support or systems without express written approval of ST              *
+* Microelectronics.                                                      *
+*                                                                        *
+*    (c) 2014 ST Microelectronics. All rights reserved.                  *
+*                                                                        *
+*           ST Microelectronics GROUP OF COMPANIES                       *
+* Australia - Brazil - France - Germany - Hong Kong - Italy - Japan      *
+* Korea - Malaysia - Malta - Morocco - The Netherlands - Singapore       *
+* Spain - Sweden - Switzerland - Taiwan - United Kingdom - U.S.A.        *
+*                                                                        *
+**************************************************************************
+
+
+.SUBCKT ESDARF01-1BM2 P1 P2
+
+.MODEL Diode D
++ IS=228.54E-9
++ N=4.6116
++ RS=0.67
++ CJO=3.1E-12
++ M=.1
++ VJ=0.75 
++ ISR=472.60E-9
++ BV=100
++ IBV=100.00E-6
++ TT=5.0000E-9
+
+
+D_D1 P1 node2 Diode
+D_D2 node2 node3 Diode
+D_D3 node3 node4 Diode
+D_D4 node4 P1 Diode
+L_L1 node3 P2 120p
+
+.ENDS

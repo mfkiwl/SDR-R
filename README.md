@@ -5,13 +5,13 @@ The purpose of this repository will be for tracking of source code changes/addit
 
 ## Directories
 
-__hw__
-
-Files for all files related to hardware
-
 __fpga-src/__
 
 Source code for any/all HDL written for the FPGA.
+
+__hw__
+
+Files for all files related to hardware
 
 __sw-src/__
 

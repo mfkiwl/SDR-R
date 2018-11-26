@@ -9,7 +9,8 @@
 # Log file: /home/johndoe/gitdir/capstone/uart-branch/fpga-src/cmoda7-gpio-test/vivado_proj/vivado.log
 # Journal file: /home/johndoe/gitdir/capstone/uart-branch/fpga-src/cmoda7-gpio-test/vivado_proj/vivado.jou
 #-----------------------------------------------------------
-open_project /home/johndoe/gitdir/capstone/joint-uart-branch/fpga-src/cmoda7-gpio-test/vivado_proj/Cmod-A7-35T-GPIO.xpr
+#open_project /home/johndoe/gitdir/capstone/joint-uart-branch/fpga-src/cmoda7-gpio-test/vivado_proj/Cmod-A7-35T-GPIO.xpr
+open_project ./Cmod-A7-35T-GPIO.xpr
 update_compile_order -fileset sources_1
 reset_run synth_1
 launch_runs synth_1 -jobs 2

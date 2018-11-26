@@ -4,7 +4,7 @@
 --effing1
 
 library IEEE;
-use iee.std_logic_1164.all;
+use ieee.std_logic_1164.all;
 
 entity mux is
     port ( 

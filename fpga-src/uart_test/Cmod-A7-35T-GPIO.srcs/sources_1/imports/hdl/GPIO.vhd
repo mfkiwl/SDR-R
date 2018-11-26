@@ -60,7 +60,7 @@ constant TMR_VAL_MAX : std_logic_vector(3 downto 0) := "1001"; --9
 
 constant RESET_CNTR_MAX : std_logic_vector(17 downto 0) := "110000110101000000";-- 100,000,000 * 0.002 = 200,000 = clk cycles per 2 ms
 
-signal dataSend : std_logic(7 downto 0);
+signal dataSend : std_logic_vector(7 downto 0);
 --Contains the length of the current string being sent over uart.
 
 
@@ -71,7 +71,7 @@ signal uartData : std_logic_vector (7 downto 0):= "00000000";
 signal uartTX : std_logic;
 
 --Current uart state signal
-signal uartState : UART_STATE_TYPE := RST_REG;
+signal uartState : UART_STATE_TYPE := LD_BYTE;
 
 signal clk_cntr_reg : std_logic_vector (4 downto 0) := (others=>'0'); 
 
@@ -85,8 +85,8 @@ signal clkRst : std_logic := '0';
 --Up Down Counters
 signal up_count_out, down_count_out, mux_out : std_logic_vector(7 downto 0);
 
-rdy_prev : std_logic;
-muxSelect : std_logic := '0';
+signal rdy_prev : std_logic;
+signal muxSelect : std_logic := '0';
 
 
 begin
@@ -103,7 +103,7 @@ inst_clk: clk_wiz_0
 ----------------------------------------------------------
 ------                Counter_up                   -------
 ----------------------------------------------------------      
-INST_up_down_counter: up_down_counter port map(
+INST_up_counter: up_down_counter port map(
     cout    => up_count_out,
     up_down => '1',
     clk     => CLK100,
@@ -113,7 +113,7 @@ INST_up_down_counter: up_down_counter port map(
 ----------------------------------------------------------
 ------                Counter_down                 -------
 ----------------------------------------------------------  
- INST_up_down_counter: up_down_counter port map(
+ INST_down_counter: up_down_counter port map(
     cout    => down_count_out,
     up_down => '0',
     clk     => CLK100,
@@ -167,10 +167,10 @@ begin
 			uartState <= WAIT_RDY;
 		when WAIT_RDY =>
 			if(uartRdy = '1') then
-				uartState => SEND_BYTE;
+				uartState <= SEND_BYTE;
 			end if;
 		when SEND_BYTE =>
-			uartState => LD_BYTE;
+			uartState <= LD_BYTE;
 		when others=> --Should not reach
 			uartState <= RST_REG;
 		end case;
@@ -189,7 +189,7 @@ begin
             --then send to the wait state
             
             --data is set to what mux out is 
-            DATA <= mux_out;
+            uartData <= mux_out;
         
         end if;
     end if;
@@ -212,12 +212,14 @@ end process;
 mux_select_process : process(CLK100)
 begin
     if (rising_edge(CLK100)) then
-        if (rdy_prev & !uartRdy) then
-            muxSelect = !muxSelect;
-        else    
-            muxSelect = muxSelect;
+        if (rdy_prev = '1') then
+            if (not(uartRdy) = '1') then 
+                muxSelect <= not(muxSelect);
+            else    
+                muxSelect <= muxSelect;
+            end if;
         end if;
-        rdy_prev = uartRdy;
+        rdy_prev <= uartRdy;
     end if;
 end process;
 

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed Oct 17 15:58:19 2018
+# Process ID: 836
+# Current directory: D:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/proj/Cmod-A7-35T-GPIO.runs/impl_1
+# Command line: vivado.exe -log GPIO_demo.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source GPIO_demo.tcl -notrace
+# Log file: D:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/proj/Cmod-A7-35T-GPIO.runs/impl_1/GPIO_demo.vdi
+# Journal file: D:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/proj/Cmod-A7-35T-GPIO.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source GPIO_demo.tcl -notrace

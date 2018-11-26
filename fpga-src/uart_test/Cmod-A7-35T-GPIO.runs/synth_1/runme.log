@@ -1,0 +1,639 @@
+
+*** Running vivado
+    with args -log GPIO_demo.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source GPIO_demo.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+Sourcing tcl script 'C:/Users/arthur/AppData/Roaming/Xilinx/Vivado/Vivado_init.tcl'
+0 Beta devices matching pattern found, 0 enabled.
+INFO: [Common 17-1463] Init.tcl in C:/Users/arthur/AppData/Roaming/Xilinx/Vivado/init.tcl is not used. Vivado_init.tcl is already sourced.
+source GPIO_demo.tcl -notrace
+Command: synth_design -top GPIO_demo -part xc7a35tcpg236-1 -flatten_hierarchy none -directive RuntimeOptimized -fsm_extraction off
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 10632 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 485.199 ; gain = 96.246
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'GPIO_demo' [D:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/src/hdl/GPIO.vhd:65]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'd:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/src/ip/clk_wiz_0/clk_wiz_0.v:70' bound to instance 'inst_clk' of component 'clk_wiz_0' [D:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/src/hdl/GPIO.vhd:267]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [d:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/src/ip/clk_wiz_0/clk_wiz_0.v:70]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0_clk_wiz' [d:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/src/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v:68]
+INFO: [Synth 8-6157] synthesizing module 'IBUF' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:19473]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IBUF' (1#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:19473]
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:25762]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 62.500000 - type: float 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKIN1_PERIOD bound to: 83.333000 - type: float 
+	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE_F bound to: 7.500000 - type: float 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT1_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT1_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT2_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT3_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT4_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT5_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT6_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT6_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
+	Parameter IS_PSEN_INVERTED bound to: 1'b0 
+	Parameter IS_PSINCDEC_INVERTED bound to: 1'b0 
+	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
+	Parameter IS_RST_INVERTED bound to: 1'b0 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
+	Parameter REF_JITTER2 bound to: 0.010000 - type: float 
+	Parameter SS_EN bound to: FALSE - type: string 
+	Parameter SS_MODE bound to: CENTER_HIGH - type: string 
+	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV' (2#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:25762]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:609]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (3#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:609]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0_clk_wiz' (4#1) [d:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/src/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (5#1) [d:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/src/ip/clk_wiz_0/clk_wiz_0.v:70]
+	Parameter DEBNC_CLOCKS bound to: 65536 - type: integer 
+	Parameter PORT_WIDTH bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'debouncer' declared at 'D:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/src/hdl/debouncer.vhd:42' bound to instance 'Inst_btn_debounce' of component 'debouncer' [D:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/src/hdl/GPIO.vhd:290]
+INFO: [Synth 8-638] synthesizing module 'debouncer' [D:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/src/hdl/debouncer.vhd:50]
+	Parameter DEBNC_CLOCKS bound to: 65536 - type: integer 
+	Parameter PORT_WIDTH bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'debouncer' (6#1) [D:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/src/hdl/debouncer.vhd:50]
+WARNING: [Synth 8-614] signal 'clk100' is read in the process but is not in the sensitivity list [D:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/src/hdl/GPIO.vhd:326]
+INFO: [Synth 8-3491] module 'UART_TX_CTRL' declared at 'D:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/src/hdl/UART_TX_CTRL.vhd:42' bound to instance 'Inst_UART_TX_CTRL' of component 'UART_TX_CTRL' [D:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/src/hdl/GPIO.vhd:416]
+INFO: [Synth 8-638] synthesizing module 'UART_TX_CTRL' [D:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/src/hdl/UART_TX_CTRL.vhd:50]
+INFO: [Synth 8-256] done synthesizing module 'UART_TX_CTRL' (7#1) [D:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/src/hdl/UART_TX_CTRL.vhd:50]
+INFO: [Synth 8-3491] module 'RGB_controller' declared at 'D:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/src/hdl/RGB_controller.vhd:20' bound to instance 'RGB_Core1' of component 'RGB_controller' [D:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/src/hdl/GPIO.vhd:432]
+INFO: [Synth 8-638] synthesizing module 'RGB_controller' [D:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/src/hdl/RGB_controller.vhd:28]
+INFO: [Synth 8-256] done synthesizing module 'RGB_controller' (8#1) [D:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/src/hdl/RGB_controller.vhd:28]
+INFO: [Synth 8-256] done synthesizing module 'GPIO_demo' (9#1) [D:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/src/hdl/GPIO.vhd:65]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 541.402 ; gain = 152.449
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 541.402 ; gain = 152.449
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 541.402 ; gain = 152.449
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/src/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'inst_clk/inst'
+Finished Parsing XDC File [d:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/src/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'inst_clk/inst'
+Parsing XDC File [d:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/src/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'inst_clk/inst'
+Finished Parsing XDC File [d:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/src/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'inst_clk/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [d:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/src/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/GPIO_demo_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/GPIO_demo_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [D:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/src/constraints/CmodA7_Master.xdc]
+Finished Parsing XDC File [D:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/src/constraints/CmodA7_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/src/constraints/CmodA7_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/GPIO_demo_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/GPIO_demo_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [D:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/proj/Cmod-A7-35T-GPIO.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/proj/Cmod-A7-35T-GPIO.runs/synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/proj/Cmod-A7-35T-GPIO.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/GPIO_demo_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/GPIO_demo_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 874.609 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 874.609 ; gain = 485.656
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 874.609 ; gain = 485.656
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst_clk. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst_clk/inst. (constraint file  D:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/proj/Cmod-A7-35T-GPIO.runs/synth_1/dont_touch.xdc, line 10).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 874.609 ; gain = 485.656
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "READY" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "txState" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "bitIndex" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-4471] merging register 'rgbLedReg2_reg[2:2]' into 'rgbLedReg1_reg[2:2]' [D:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/src/hdl/RGB_controller.vhd:169]
+INFO: [Synth 8-4471] merging register 'rgbLedReg2_reg[1:1]' into 'rgbLedReg1_reg[1:1]' [D:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/src/hdl/RGB_controller.vhd:182]
+INFO: [Synth 8-4471] merging register 'rgbLedReg2_reg[0:0]' into 'rgbLedReg1_reg[0:0]' [D:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/src/hdl/RGB_controller.vhd:195]
+INFO: [Synth 8-4471] merging register 'sendStr_reg[19][7:0]' into 'sendStr_reg[9][7:0]' [D:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/src/hdl/GPIO.vhd:380]
+INFO: [Synth 8-4471] merging register 'sendStr_reg[26][7:0]' into 'sendStr_reg[25][7:0]' [D:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/src/hdl/GPIO.vhd:380]
+INFO: [Synth 8-4471] merging register 'sendStr_reg[27][7:0]' into 'sendStr_reg[25][7:0]' [D:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/src/hdl/GPIO.vhd:380]
+INFO: [Synth 8-4471] merging register 'sendStr_reg[29][7:0]' into 'sendStr_reg[28][7:0]' [D:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/src/hdl/GPIO.vhd:380]
+WARNING: [Synth 8-6014] Unused sequential element sendStr_reg[19] was removed.  [D:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/src/hdl/GPIO.vhd:380]
+WARNING: [Synth 8-6014] Unused sequential element sendStr_reg[26] was removed.  [D:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/src/hdl/GPIO.vhd:380]
+WARNING: [Synth 8-6014] Unused sequential element sendStr_reg[27] was removed.  [D:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/src/hdl/GPIO.vhd:380]
+WARNING: [Synth 8-6014] Unused sequential element sendStr_reg[29] was removed.  [D:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/src/hdl/GPIO.vhd:380]
+INFO: [Synth 8-5544] ROM "sendStr[0]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sendStr[1]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sendStr[2]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sendStr[3]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sendStr[4]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sendStr[5]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sendStr[7]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sendStr[8]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sendStr[10]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sendStr[11]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sendStr[12]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sendStr[13]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sendStr[14]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sendStr[15]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sendStr[16]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sendStr[21]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sendStr[22]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sendStr[23]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sendStr[24]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "strEnd" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "strIndex" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 874.609 ; gain = 485.656
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               31 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 28    
+	                6 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   3 Input     31 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 5     
+	   3 Input      8 Bit        Muxes := 18    
+	   2 Input      7 Bit        Muxes := 9     
+	   2 Input      6 Bit        Muxes := 10    
+	   2 Input      3 Bit        Muxes := 1     
+	   9 Input      3 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 8     
+	   4 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module GPIO_demo 
+Detailed RTL Component Info : 
++---Registers : 
+	               31 Bit    Registers := 1     
+	                8 Bit    Registers := 28    
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   3 Input     31 Bit        Muxes := 1     
+	   3 Input      8 Bit        Muxes := 18    
+	   2 Input      7 Bit        Muxes := 8     
+	   2 Input      6 Bit        Muxes := 10    
+	   2 Input      3 Bit        Muxes := 1     
+	   9 Input      3 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 1     
+Module debouncer 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module UART_TX_CTRL 
+Detailed RTL Component Info : 
++---Registers : 
+	               10 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 1     
+Module RGB_controller 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	                9 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 5     
+	   2 Input      7 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-3886] merging instance 'strEnd_reg[0]' (FDSE) to 'strEnd_reg[1]'
+INFO: [Synth 8-3886] merging instance 'strEnd_reg[1]' (FDSE) to 'strEnd_reg[2]'
+INFO: [Synth 8-3886] merging instance 'strEnd_reg[3]' (FDSE) to 'strEnd_reg[4]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\strEnd_reg[4] )
+INFO: [Synth 8-3886] merging instance 'strEnd_reg[5]' (FDRE) to 'strEnd_reg[6]'
+INFO: [Synth 8-3886] merging instance 'strEnd_reg[6]' (FDRE) to 'strEnd_reg[7]'
+INFO: [Synth 8-3886] merging instance 'strEnd_reg[7]' (FDRE) to 'strEnd_reg[8]'
+INFO: [Synth 8-3886] merging instance 'strEnd_reg[8]' (FDRE) to 'strEnd_reg[9]'
+INFO: [Synth 8-3886] merging instance 'strEnd_reg[9]' (FDRE) to 'strEnd_reg[10]'
+INFO: [Synth 8-3886] merging instance 'strEnd_reg[10]' (FDRE) to 'strEnd_reg[11]'
+INFO: [Synth 8-3886] merging instance 'strEnd_reg[11]' (FDRE) to 'strEnd_reg[12]'
+INFO: [Synth 8-3886] merging instance 'strEnd_reg[12]' (FDRE) to 'strEnd_reg[13]'
+INFO: [Synth 8-3886] merging instance 'strEnd_reg[13]' (FDRE) to 'strEnd_reg[14]'
+INFO: [Synth 8-3886] merging instance 'strEnd_reg[14]' (FDRE) to 'strEnd_reg[15]'
+INFO: [Synth 8-3886] merging instance 'strEnd_reg[15]' (FDRE) to 'strEnd_reg[16]'
+INFO: [Synth 8-3886] merging instance 'strEnd_reg[16]' (FDRE) to 'strEnd_reg[17]'
+INFO: [Synth 8-3886] merging instance 'strEnd_reg[17]' (FDRE) to 'strEnd_reg[18]'
+INFO: [Synth 8-3886] merging instance 'strEnd_reg[18]' (FDRE) to 'strEnd_reg[19]'
+INFO: [Synth 8-3886] merging instance 'strEnd_reg[19]' (FDRE) to 'strEnd_reg[20]'
+INFO: [Synth 8-3886] merging instance 'strEnd_reg[20]' (FDRE) to 'strEnd_reg[21]'
+INFO: [Synth 8-3886] merging instance 'strEnd_reg[21]' (FDRE) to 'strEnd_reg[22]'
+INFO: [Synth 8-3886] merging instance 'strEnd_reg[22]' (FDRE) to 'strEnd_reg[23]'
+INFO: [Synth 8-3886] merging instance 'strEnd_reg[23]' (FDRE) to 'strEnd_reg[24]'
+INFO: [Synth 8-3886] merging instance 'strEnd_reg[24]' (FDRE) to 'strEnd_reg[25]'
+INFO: [Synth 8-3886] merging instance 'strEnd_reg[25]' (FDRE) to 'strEnd_reg[26]'
+INFO: [Synth 8-3886] merging instance 'strEnd_reg[26]' (FDRE) to 'strEnd_reg[27]'
+INFO: [Synth 8-3886] merging instance 'strEnd_reg[27]' (FDRE) to 'strEnd_reg[28]'
+INFO: [Synth 8-3886] merging instance 'strEnd_reg[28]' (FDRE) to 'strEnd_reg[29]'
+INFO: [Synth 8-3886] merging instance 'strEnd_reg[29]' (FDRE) to 'strEnd_reg[30]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\strEnd_reg[30] )
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[15][7]' (FDRE) to 'sendStr_reg[15][3]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[14][7]' (FDRE) to 'sendStr_reg[14][4]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[13][7]' (FDRE) to 'sendStr_reg[13][4]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[12][7]' (FDRE) to 'sendStr_reg[12][4]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[11][7]' (FDRE) to 'sendStr_reg[11][3]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[10][7]' (FDRE) to 'sendStr_reg[10][3]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[8][7]' (FDRE) to 'sendStr_reg[9][7]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[7][7]' (FDRE) to 'sendStr_reg[17][7]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[6][7]' (FDRE) to 'sendStr_reg[6][0]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[5][7]' (FDRE) to 'sendStr_reg[5][4]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[4][7]' (FDRE) to 'sendStr_reg[18][7]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[3][7]' (FDRE) to 'sendStr_reg[3][1]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[2][7]' (FDRE) to 'sendStr_reg[2][3]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[1][7]' (FDRE) to 'sendStr_reg[1][1]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[0][7]' (FDRE) to 'sendStr_reg[0][5]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[30][7]' (FDRE) to 'sendStr_reg[30][1]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[28][7]' (FDRE) to 'sendStr_reg[30][1]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[25][7]' (FDRE) to 'sendStr_reg[30][1]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[24][7]' (FDRE) to 'sendStr_reg[30][1]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[23][7]' (FDRE) to 'sendStr_reg[23][5]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[22][7]' (FDRE) to 'sendStr_reg[22][5]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[21][7]' (FDRE) to 'sendStr_reg[21][4]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[20][7]' (FDRE) to 'sendStr_reg[18][7]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[9][7]' (FDRE) to 'sendStr_reg[9][4]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[18][7]' (FDRE) to 'sendStr_reg[4][4]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[17][7]' (FDRE) to 'sendStr_reg[7][3]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[16][7]' (FDRE) to 'sendStr_reg[16][4]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[15][6]' (FDSE) to 'sendStr_reg[15][4]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[13][6]' (FDSE) to 'sendStr_reg[13][2]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[12][6]' (FDSE) to 'sendStr_reg[12][3]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[11][6]' (FDSE) to 'sendStr_reg[11][4]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[10][6]' (FDSE) to 'sendStr_reg[10][1]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[8][6]' (FDRE) to 'sendStr_reg[9][6]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[7][6]' (FDSE) to 'sendStr_reg[17][6]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[6][6]' (FDRE) to 'sendStr_reg[6][0]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[5][6]' (FDSE) to 'sendStr_reg[5][2]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[4][6]' (FDSE) to 'sendStr_reg[18][6]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[3][6]' (FDSE) to 'sendStr_reg[3][2]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\sendStr_reg[2][6] )
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[1][6]' (FDRE) to 'sendStr_reg[1][5]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[30][6]' (FDRE) to 'sendStr_reg[30][1]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[28][6]' (FDRE) to 'sendStr_reg[30][1]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[25][6]' (FDRE) to 'sendStr_reg[30][1]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[24][6]' (FDRE) to 'sendStr_reg[30][1]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[23][6]' (FDSE) to 'sendStr_reg[23][1]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[22][6]' (FDSE) to 'sendStr_reg[22][2]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[21][6]' (FDSE) to 'sendStr_reg[21][2]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[20][6]' (FDSE) to 'sendStr_reg[18][6]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[9][6]' (FDRE) to 'sendStr_reg[9][2]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[18][6]' (FDSE) to 'sendStr_reg[18][4]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[17][6]' (FDSE) to 'sendStr_reg[17][1]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[16][6]' (FDSE) to 'sendStr_reg[16][0]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[14][5]' (FDSE) to 'sendStr_reg[14][2]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[11][5]' (FDRE) to 'sendStr_reg[11][1]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[10][5]' (FDRE) to 'sendStr_reg[10][4]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[8][5]' (FDSE) to 'sendStr_reg[9][5]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[7][5]' (FDRE) to 'sendStr_reg[17][5]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\sendStr_reg[6][5] )
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[5][5]' (FDRE) to 'sendStr_reg[5][3]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[4][5]' (FDRE) to 'sendStr_reg[20][5]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[3][5]' (FDRE) to 'sendStr_reg[3][4]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[2][5]' (FDRE) to 'sendStr_reg[2][4]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[1][5]' (FDRE) to 'sendStr_reg[1][4]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[0][5]' (FDRE) to 'sendStr_reg[0][4]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[30][5]' (FDRE) to 'sendStr_reg[30][1]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[28][5]' (FDRE) to 'sendStr_reg[30][1]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[25][5]' (FDSE) to 'sendStr_reg[30][0]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[24][5]' (FDSE) to 'sendStr_reg[30][0]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[23][5]' (FDRE) to 'sendStr_reg[23][4]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[22][5]' (FDRE) to 'sendStr_reg[22][4]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[20][5]' (FDRE) to 'sendStr_reg[18][5]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[9][5]' (FDSE) to 'sendStr_reg[8][4]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[17][5]' (FDRE) to 'sendStr_reg[7][4]'
+INFO: [Synth 8-3886] merging instance 'sendStr_reg[16][5]' (FDRE) to 'sendStr_reg[16][2]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sendStr_reg[14][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sendStr_reg[13][4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\sendStr_reg[11][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sendStr_reg[23][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sendStr_reg[22][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sendStr_reg[10][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sendStr_reg[2][3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\sendStr_reg[22][3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\sendStr_reg[15][2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\sendStr_reg[13][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sendStr_reg[11][2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\sendStr_reg[5][2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\sendStr_reg[3][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sendStr_reg[15][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sendStr_reg[12][1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\sendStr_reg[8][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sendStr_reg[7][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sendStr_reg[3][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sendStr_reg[1][1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\sendStr_reg[0][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sendStr_reg[21][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sendStr_reg[9][1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\sendStr_reg[17][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sendStr_reg[16][1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\sendStr_reg[14][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\sendStr_reg[10][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sendStr_reg[6][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sendStr_reg[5][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\sendStr_reg[4][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\sendStr_reg[1][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sendStr_reg[0][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sendStr_reg[25][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\sendStr_reg[24][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\sendStr_reg[23][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\sendStr_reg[21][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sendStr_reg[18][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\sendStr_reg[16][0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Inst_UART_TX_CTRL/\txData_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Inst_UART_TX_CTRL/\txData_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uartData_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Inst_UART_TX_CTRL/\txData_reg[8] )
+WARNING: [Synth 8-3332] Sequential element (txData_reg[9]) is unused and will be removed from module UART_TX_CTRL.
+WARNING: [Synth 8-3332] Sequential element (txData_reg[8]) is unused and will be removed from module UART_TX_CTRL.
+WARNING: [Synth 8-3332] Sequential element (strEnd_reg[30]) is unused and will be removed from module GPIO_demo.
+WARNING: [Synth 8-3332] Sequential element (strEnd_reg[4]) is unused and will be removed from module GPIO_demo.
+WARNING: [Synth 8-3332] Sequential element (sendStr_reg[0][1]) is unused and will be removed from module GPIO_demo.
+WARNING: [Synth 8-3332] Sequential element (sendStr_reg[0][0]) is unused and will be removed from module GPIO_demo.
+WARNING: [Synth 8-3332] Sequential element (sendStr_reg[1][1]) is unused and will be removed from module GPIO_demo.
+WARNING: [Synth 8-3332] Sequential element (sendStr_reg[1][0]) is unused and will be removed from module GPIO_demo.
+WARNING: [Synth 8-3332] Sequential element (sendStr_reg[2][6]) is unused and will be removed from module GPIO_demo.
+WARNING: [Synth 8-3332] Sequential element (sendStr_reg[2][3]) is unused and will be removed from module GPIO_demo.
+WARNING: [Synth 8-3332] Sequential element (sendStr_reg[3][2]) is unused and will be removed from module GPIO_demo.
+WARNING: [Synth 8-3332] Sequential element (sendStr_reg[3][1]) is unused and will be removed from module GPIO_demo.
+WARNING: [Synth 8-3332] Sequential element (sendStr_reg[5][2]) is unused and will be removed from module GPIO_demo.
+WARNING: [Synth 8-3332] Sequential element (sendStr_reg[5][0]) is unused and will be removed from module GPIO_demo.
+WARNING: [Synth 8-3332] Sequential element (sendStr_reg[6][5]) is unused and will be removed from module GPIO_demo.
+WARNING: [Synth 8-3332] Sequential element (sendStr_reg[6][0]) is unused and will be removed from module GPIO_demo.
+WARNING: [Synth 8-3332] Sequential element (sendStr_reg[10][3]) is unused and will be removed from module GPIO_demo.
+WARNING: [Synth 8-3332] Sequential element (sendStr_reg[10][0]) is unused and will be removed from module GPIO_demo.
+WARNING: [Synth 8-3332] Sequential element (sendStr_reg[11][4]) is unused and will be removed from module GPIO_demo.
+WARNING: [Synth 8-3332] Sequential element (sendStr_reg[11][2]) is unused and will be removed from module GPIO_demo.
+WARNING: [Synth 8-3332] Sequential element (sendStr_reg[12][1]) is unused and will be removed from module GPIO_demo.
+WARNING: [Synth 8-3332] Sequential element (sendStr_reg[13][4]) is unused and will be removed from module GPIO_demo.
+WARNING: [Synth 8-3332] Sequential element (sendStr_reg[13][2]) is unused and will be removed from module GPIO_demo.
+WARNING: [Synth 8-3332] Sequential element (sendStr_reg[14][4]) is unused and will be removed from module GPIO_demo.
+WARNING: [Synth 8-3332] Sequential element (sendStr_reg[14][0]) is unused and will be removed from module GPIO_demo.
+WARNING: [Synth 8-3332] Sequential element (sendStr_reg[15][2]) is unused and will be removed from module GPIO_demo.
+WARNING: [Synth 8-3332] Sequential element (sendStr_reg[15][1]) is unused and will be removed from module GPIO_demo.
+WARNING: [Synth 8-3332] Sequential element (sendStr_reg[16][1]) is unused and will be removed from module GPIO_demo.
+WARNING: [Synth 8-3332] Sequential element (sendStr_reg[16][0]) is unused and will be removed from module GPIO_demo.
+WARNING: [Synth 8-3332] Sequential element (sendStr_reg[21][1]) is unused and will be removed from module GPIO_demo.
+WARNING: [Synth 8-3332] Sequential element (sendStr_reg[21][0]) is unused and will be removed from module GPIO_demo.
+WARNING: [Synth 8-3332] Sequential element (sendStr_reg[22][4]) is unused and will be removed from module GPIO_demo.
+WARNING: [Synth 8-3332] Sequential element (sendStr_reg[22][3]) is unused and will be removed from module GPIO_demo.
+WARNING: [Synth 8-3332] Sequential element (sendStr_reg[23][4]) is unused and will be removed from module GPIO_demo.
+WARNING: [Synth 8-3332] Sequential element (sendStr_reg[23][0]) is unused and will be removed from module GPIO_demo.
+WARNING: [Synth 8-3332] Sequential element (uartData_reg[7]) is unused and will be removed from module GPIO_demo.
+WARNING: [Synth 8-3332] Sequential element (sendStr_reg[17][1]) is unused and will be removed from module GPIO_demo.
+WARNING: [Synth 8-3332] Sequential element (sendStr_reg[8][1]) is unused and will be removed from module GPIO_demo.
+WARNING: [Synth 8-3332] Sequential element (sendStr_reg[9][1]) is unused and will be removed from module GPIO_demo.
+WARNING: [Synth 8-3332] Sequential element (sendStr_reg[7][1]) is unused and will be removed from module GPIO_demo.
+WARNING: [Synth 8-3332] Sequential element (sendStr_reg[4][0]) is unused and will be removed from module GPIO_demo.
+WARNING: [Synth 8-3332] Sequential element (sendStr_reg[24][0]) is unused and will be removed from module GPIO_demo.
+WARNING: [Synth 8-3332] Sequential element (sendStr_reg[25][0]) is unused and will be removed from module GPIO_demo.
+WARNING: [Synth 8-3332] Sequential element (sendStr_reg[18][0]) is unused and will be removed from module GPIO_demo.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 874.609 ; gain = 485.656
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 874.609 ; gain = 485.656
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 887.371 ; gain = 498.418
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 887.371 ; gain = 498.418
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 887.371 ; gain = 498.418
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 887.371 ; gain = 498.418
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |BUFG       |     2|
+|2     |CARRY4     |    44|
+|3     |LUT1       |    10|
+|4     |LUT2       |     6|
+|5     |LUT3       |    26|
+|6     |LUT4       |    35|
+|7     |LUT5       |    25|
+|8     |LUT6       |    53|
+|9     |MMCME2_ADV |     1|
+|10    |MUXF7      |     2|
+|11    |FDRE       |   195|
+|12    |FDSE       |     2|
+|13    |IBUF       |     3|
+|14    |OBUF       |     6|
++------+-----------+------+
+
+Report Instance Areas: 
++------+--------------------+------------------+------+
+|      |Instance            |Module            |Cells |
++------+--------------------+------------------+------+
+|1     |top                 |                  |   410|
+|2     |  inst_clk          |clk_wiz_0         |     4|
+|3     |    inst            |clk_wiz_0_clk_wiz |     4|
+|4     |  Inst_btn_debounce |debouncer         |    56|
+|5     |  Inst_UART_TX_CTRL |UART_TX_CTRL      |    90|
+|6     |  RGB_Core1         |RGB_controller    |   100|
++------+--------------------+------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 887.371 ; gain = 498.418
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 48 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 887.371 ; gain = 165.211
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 887.371 ; gain = 498.418
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 50 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+217 Infos, 49 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 889.992 ; gain = 512.512
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'D:/Github/releases/Cmod-A7/Cmod-A7-35T-GPIO/proj/Cmod-A7-35T-GPIO.runs/synth_1/GPIO_demo.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file GPIO_demo_utilization_synth.rpt -pb GPIO_demo_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.049 . Memory (MB): peak = 889.992 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 17 15:58:12 2018...

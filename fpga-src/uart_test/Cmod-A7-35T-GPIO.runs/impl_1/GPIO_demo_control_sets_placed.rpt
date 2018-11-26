@@ -1,0 +1,79 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Wed Oct 17 15:58:50 2018
+| Host         : WK142 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file GPIO_demo_control_sets_placed.rpt
+| Design       : GPIO_demo
+| Device       : xc7a35t
+--------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    13 |
+| Unused register locations in slices containing registers |    30 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|     12 |            2 |
+|     14 |            2 |
+|    16+ |            9 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              30 |           10 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             192 |           28 |
+| Yes          | No                    | No                     |              28 |            6 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             144 |           20 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------------+---------------------------------+-----------------------------------------------+------------------+----------------+
+|       Clock Signal      |          Enable Signal          |                Set/Reset Signal               | Slice Load Count | Bel Load Count |
++-------------------------+---------------------------------+-----------------------------------------------+------------------+----------------+
+|  inst_clk/inst/clk_out1 |                                 | RGB_Core1/windowcount[5]_i_1_n_0              |                3 |             12 |
+|  inst_clk/inst/clk_out1 |                                 | sendStr[7][0]                                 |                3 |             12 |
+|  inst_clk/inst/clk_out1 | uartSend                        |                                               |                1 |             14 |
+|  inst_clk/inst/clk_out1 | uartData                        |                                               |                5 |             14 |
+|  inst_clk/inst/clk_out1 | RGB_Core1/valcount[8]_i_2_n_0   | RGB_Core1/valcount                            |                3 |             18 |
+|  inst_clk/inst/clk_out1 |                                 | Inst_UART_TX_CTRL/bitTmr[0]_i_1_n_0           |                4 |             28 |
+|  inst_clk/inst/clk_out1 |                                 |                                               |               10 |             30 |
+|  inst_clk/inst/clk_out1 |                                 | Inst_btn_debounce/sig_cntrs_ary[0][0]_i_1_n_0 |                4 |             32 |
+|  inst_clk/inst/clk_out1 |                                 | Inst_btn_debounce/sig_cntrs_ary[1][0]_i_1_n_0 |                4 |             32 |
+|  inst_clk/inst/clk_out1 |                                 | reset_cntr0                                   |                5 |             36 |
+|  inst_clk/inst/clk_out1 |                                 | RGB_Core1/deltacount[0]_i_1_n_0               |                5 |             40 |
+|  inst_clk/inst/clk_out1 | uartData                        | strIndex0                                     |                8 |             62 |
+|  inst_clk/inst/clk_out1 | Inst_UART_TX_CTRL/txBit_i_1_n_0 | Inst_UART_TX_CTRL/READY                       |                9 |             64 |
++-------------------------+---------------------------------+-----------------------------------------------+------------------+----------------+
+
+

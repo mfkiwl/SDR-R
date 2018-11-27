@@ -15,6 +15,8 @@ use IEEE.std_logic_unsigned.all;
 
 entity GPIO_demo is
 Port ( 
+    pio         : in std_logic_vector(7 downto 0);
+    pio2        : in std_logic_vector(7 downto 0);
     CLK 		: in  STD_LOGIC;
     UART_TXD 	: out  STD_LOGIC);
 end GPIO_demo;
@@ -37,12 +39,19 @@ port(
     reset           : in std_logic);
 end component;
 
-component up_down_counter
-Port (
-	cout    : out std_logic_vector (7 downto 0); 
-    up_down : in  std_logic;                   -- up_down control for counter
-    clk     : in  std_logic;                   -- Input clock
-    reset   : in  std_logic);                   -- Input reset
+--component up_down_counter
+--Port (
+--	cout    : out std_logic_vector (7 downto 0); 
+--    up_down : in  std_logic;                   -- up_down control for counter
+--    clk     : in  std_logic;                   -- Input clock
+--    reset   : in  std_logic);                   -- Input reset
+--end component;
+
+component bitregister is
+port(
+    DATA    : in std_logic_vector(7 downto 0);
+    CLK     : in std_logic;
+    Q       : out std_logic_vector(7 downto 0));
 end component;
 
 component mux
@@ -71,7 +80,7 @@ signal uartData : std_logic_vector (7 downto 0):= "00000000";
 signal uartTX : std_logic;
 
 --Current uart state signal
-signal uartState : UART_STATE_TYPE := LD_BYTE;
+signal uartState : UART_STATE_TYPE := RST_REG;
 
 signal clk_cntr_reg : std_logic_vector (4 downto 0) := (others=>'0'); 
 
@@ -82,8 +91,8 @@ signal reset_cntr : std_logic_vector (17 downto 0) := (others=>'0');
 signal clk100 : std_logic;
 signal clkRst : std_logic := '0';
 
---Up Down Counters
-signal up_count_out, down_count_out, mux_out : std_logic_vector(7 downto 0);
+--Up Down Counters --up_count_out, down_count_out,
+signal  mux_out, reg_q1, reg_q2, reg_q3, reg_q4 : std_logic_vector(7 downto 0);
 
 signal rdy_prev : std_logic;
 signal muxSelect : std_logic := '0';
@@ -103,29 +112,53 @@ inst_clk: clk_wiz_0
 ----------------------------------------------------------
 ------                Counter_up                   -------
 ----------------------------------------------------------      
-INST_up_counter: up_down_counter port map(
-    cout    => up_count_out,
-    up_down => '1',
-    clk     => CLK100,
-    reset   => clkRst
-);
+--INST_up_counter: up_down_counter port map(
+--    cout    => up_count_out,
+--    up_down => '1',
+--    clk     => CLK100,
+--    reset   => clkRst
+--);
 
 ----------------------------------------------------------
 ------                Counter_down                 -------
 ----------------------------------------------------------  
- INST_down_counter: up_down_counter port map(
-    cout    => down_count_out,
-    up_down => '0',
-    clk     => CLK100,
-    reset   => clkRst
+-- INST_down_counter: up_down_counter port map(
+--    cout    => down_count_out,
+--    up_down => '0',
+--    clk     => CLK100,
+--    reset   => clkRst
+--);
+----------------------------------------------------------
+------                Register 1-4                 -------
+----------------------------------------------------------  
+INST_reg1: bitregister port map(
+    DATA=> pio,
+    CLK=> CLK100,
+    Q=> reg_q1
 );
+INST_reg2: bitregister port map(
+    DATA=> reg_q1,
+    CLK=> CLK100,
+    Q=> reg_q2
+);
+INST_reg3: bitregister port map(
+    DATA=> pio2,
+    CLK=> CLK100,
+    Q=> reg_q3
+);
+INST_reg4: bitregister port map(
+    DATA=> reg_q3,
+    CLK=> CLK100,
+    Q=> reg_q4
+);
+
 ----------------------------------------------------------
 ------                Counter Mux                  -------
 ----------------------------------------------------------  
 INST_mux: mux port map(
     SEL => muxSelect, -------- Need to change to a signal
-    A => up_count_out,
-    B => down_count_out,
+    A => reg_q2,
+    B => reg_q4,
     X => mux_out
 );
 

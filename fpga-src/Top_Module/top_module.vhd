@@ -43,7 +43,7 @@ entity top_module is
            Cbus2 : out std_logic;
            Cbus1 : in std_logic;
            Cbus0 : in std_logic;
-           CLK   : in STD_LOGIC); 
+           sysclk   : in STD_LOGIC); 
 end top_module;
 
 architecture Behavioral of top_module is
@@ -55,17 +55,26 @@ architecture Behavioral of top_module is
     signal pre_q_samp : std_logic_vector (7 downto 0) := x"00";
     signal i_samp     : std_logic_vector (7 downto 0) := x"00";
     signal q_samp     : std_logic_vector (7 downto 0) := x"00";
-    signal clk120     : std_logic; -- TODO: Fix name later as it's not necessarily 120 Mhz
+  --signal clk120     : std_logic; -- NOTE: Note, left over, can delete
+    signal clk25      : std_logic; -- NOTE: 25 MHz clock for USB block transfer stage
     
     -- COMPONENT DECLARATIONS
-    
-    component up_down_counter
-        port (cout    :out std_logic_vector (7 downto 0); 
-              up_down :in  std_logic;                   -- up_down control for counter
-              clk     :in  std_logic;                   -- Input clock
-              reset   :in  std_logic                    -- Input reset
+    component doublecounter
+        port (cout1   :out std_logic_vector (7 downto 0);
+              cout2   :out std_logic_vector (7 downto 0);
+              up_down : in std_logic;
+              clk     : in std_logic;
+              reset   : in std_logic
               );
     end component;
+    
+--    component up_down_counter
+--        port (cout    :out std_logic_vector (7 downto 0); 
+--              up_down :in  std_logic;                   -- up_down control for counter
+--              clk     :in  std_logic;                   -- Input clock
+--              reset   :in  std_logic                    -- Input reset
+--              );
+--    end component;
 
     component bitregister
         port (DATA : in  std_logic_vector(7 downto 0);
@@ -73,9 +82,6 @@ architecture Behavioral of top_module is
               Q    : out std_logic_vector(7 downto 0));
     end component;
 
--- TODO: Following component will change soon
--- NOTE: Contains FSM that needs to be replaced with new pretty one. 
--- NOTE: This following declaration format may change
     component USB_BLOCK
         port (data1    : in STD_LOGIC_VECTOR (7 downto 0);
               data2    : in STD_LOGIC_VECTOR (7 downto 0);
@@ -102,61 +108,68 @@ begin
     -- Clock Generator --
     clkgen : clk_wiz_0
     port map (
-    clk_out1 => clk120,
+    clk_out1 => clk25,
     resetn => '1',
-    clk_in1 => CLK
+    clk_in1 => sysclk
     );
     
 -- Counters for Sample Data
-    upcounter : up_down_counter
+    mixcounter: doublecounter
     port map (
-    cout    => upcount,
+    cout1  => upcount,
+    cout2  => downcount,
     up_down => '1',
-    clk   => clk120,
-    reset => '0');
+    clk     => clk25,
+    reset   => '0');
+
+--    upcounter : up_down_counter
+--    port map (
+--    cout    => upcount,
+--    up_down => '1',
+--    clk   => clk25,
+--    reset => '0');
     
-    downcounter : up_down_counter
-    port map (
-    cout    => downcount,
-    up_down => '0',
-    clk => clk120,
-    reset => '0');
+--    downcounter : up_down_counter
+--    port map (
+--    cout    => downcount,
+--    up_down => '0',
+--    clk => clk25,
+--    reset => '0');
 
 -- GPIO Sample Registers --
 -- Inphase Bus --
     Imeta : bitregister
     port map (
     DATA => upcount,
-    CLK  => clk120,
+    CLK  => clk25,
     Q    => pre_i_samp);
     
     Istable : bitregister
     port map (
     DATA => pre_i_samp,
-    CLK  => clk120,
+    CLK  => clk25,
     Q    => i_samp);
     
  -- Quadrature Bus --
     Qmeta : bitregister
     port map (
     DATA => downcount,
-    CLK  => clk120,
+    CLK  => clk25,
     Q    => pre_q_samp);
     
     Qstable : bitregister
     port map (
     DATA => pre_q_samp,
-    CLK  => clk120,
+    CLK  => clk25,
     Q    => q_samp);
 
 -- USB Block --
 -- NOTE: Contains FSM that needs to be replaced with new pretty one. 
--- NOTE: This following declaration format may change
     USBtransfer : USB_BLOCK
     port map (
     data1 => i_samp,
     data2 => q_samp,
-    clk => clk120,
+    clk => clk25,
     reset_n => '1',
     FT_clk => Cbus5, -- in
     FT_TX => Cbus1,  -- in

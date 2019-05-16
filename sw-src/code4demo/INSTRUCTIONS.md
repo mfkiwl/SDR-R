@@ -13,6 +13,14 @@ The code contained here is intended for the Final Demo.
 
 ## Compilation Instructions
 
+### Normal Way
+
 ```bash
 gcc -Wall sdrdriver.c -lftdi1 -pthread -o runme.out
 ```
+### Idiot Proof Way
+
+```bash
+./compile.sh
+```
+

@@ -73,4 +73,4 @@ to compile and run the code found in **sw-src**.
 
 This project wouldn't be what it is without the inspiration drawn from the following:
 * [This blog post](https://digibird1.wordpress.com/adc-readout-and-usb2-0-data-transfer-with-an-fpga/) for inspiring us to try out an FTDI chip instead of terrible terrible UART.
-* [This github repo](https://github.com/RandomReaper/pim-vhdl) for providing an open source FSM for interfacing with the FT232H. Many thanks to [Mssr. Marc Pignat](https://github.com/RandomReaper)!.
+* [This github repo](https://github.com/RandomReaper/pim-vhdl) for providing an open source FSM for interfacing with the FT232H. Many thanks to [Mssr. Marc Pignat](https://github.com/RandomReaper)!

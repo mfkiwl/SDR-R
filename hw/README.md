@@ -8,8 +8,20 @@ When convenient or necessary, document this readme to explain the organization o
 
 See other readmes as an example for consistant formatting
 
-Folder structure:
-SDRR-------------------KiCad design files
-Chips------------------Downloaded library files for IC's in schematic
-Datasheets-------------Data sheets for the IC's
-FAB--------------------Output files from PCB design, for fabrication
+## Directories
+
+__SDRR__
+
+KiCad design files
+
+__Chips__
+
+Downloaded library files for IC's in schematic
+
+__Datasheets__
+
+Data sheets for the IC's
+
+__FAB__
+
+Output files from PCB design, for fabrication
